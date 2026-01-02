@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController // Tells Spring this class handles Web Requests
 @RequestMapping("/api/products") // All URLs will start with /api/products
+@CrossOrigin(origins = "http://localhost:3000") // <--- ADD THIS LINE
 @RequiredArgsConstructor
 @Tag(name = "Product Management", description = "Create, Read, Update, and Delete products")
 public class ProductController {
